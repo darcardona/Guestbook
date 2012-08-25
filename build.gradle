@@ -1,8 +1,16 @@
 apply plugin: 'eclipse'
 apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
 
-springVersion = '3.1.0.RC1'
+springVersion = '3.1.2.RELEASE'
 mockitoVersion = '1.8.5'
+
+configurations {
+    all*.exclude group: 'javax.mail'
+    all*.exclude group: 'javax.jms'
+    all*.exclude group: 'com.sun.jdmk'
+    all*.exclude group: 'com.sun.jmx'
+}
 
 dependencies {
 	compile ("org.springframework:spring-context:$springVersion") {
@@ -15,12 +23,6 @@ dependencies {
 	compile "org.slf4j:slf4j-api:1.5.10"
 	compile "org.slf4j:jcl-over-slf4j:1.5.10"
 	compile "org.slf4j:slf4j-log4j12:1.5.10"
-	compile ("log4j:log4j:1.2.15") {
-		exclude module: 'javax.mail'
-		exclude module: 'javax.jms'
-		exclude module: 'com.sun.jdmk'
-		exclude module: 'com.sun.jmx'
-	}
 	compile "javax.inject:javax.inject:1"
 	compile "com.h2database:h2:1.3.156"
 	providedCompile ("javax.servlet:javax.servlet-api:3.0.1") { provided = true }
@@ -40,5 +42,5 @@ repositories {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.0-milestone-3'
+    gradleVersion = '1.1'
 }
