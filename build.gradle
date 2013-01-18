@@ -37,7 +37,6 @@ dependencies {
     compile "javax.inject:javax.inject:1"
     compile "com.h2database:h2:${h2Version}"
     compile "javax.servlet:jstl:${jstlVersion}"
-//    compile "org.codehaus.groovy:groovy:${groovyVersion}"
     providedCompile("javax.servlet:javax.servlet-api:${servletVersion}")
     compile("javax.servlet.jsp:jsp-api:${jspVersion}")
     testCompile "junit:junit:${junitVersion}"
