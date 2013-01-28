@@ -56,10 +56,9 @@ repositories {
         // Look for POMs and artifacts, such as JARs, here
         url "http://repo1.maven.org/maven2"
         // Look for artifacts here if not found at the above location
-        artifactUrls "http://repo.springsource.org/libs-release-remote"
-        artifactUrls "http://repo.springsource.org/libs-snapshot-remote"
-        artifactUrls "http://repo.springsource.org/libs-milestone-remote"
-        artifactUrls "http://repo.springsource.org/libs-milestone-remote"
+        artifactUrls "http://repo.springsource.org/release"
+        artifactUrls "http://repo.springsource.org/snapshot"
+        artifactUrls "http://repo.springsource.org/milestone"
         artifactUrls "http://repo.gradle.org/gradle/libs-releases-local"
         artifactUrls "http://repo.gradle.org/gradle/libs-releases"
         artifactUrls "http://repo.gradle.org/gradle/plugins-releases"
